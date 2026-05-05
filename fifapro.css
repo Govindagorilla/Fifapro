@@ -5,12 +5,26 @@
     --glass: rgba(255, 255, 255, 0.1);
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
 body {
     background: radial-gradient(circle at top, #1a1f3c, var(--deep-blue));
     color: white;
     font-family: 'Inter', sans-serif;
     margin: 0;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 header {
@@ -28,8 +42,37 @@ h1 {
     text-shadow: 3px 3px var(--hyper-pink);
 }
 
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 40px 0 20px 0;
+    color: var(--neon-green);
+}
+
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.intro h2 {
+    margin-top: 0;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--hyper-pink);
+    margin: 10px 0 0 0;
+}
+
 .countdown-timer {
     background: var(--hyper-pink);
+    color: var(--deep-blue);
     display: inline-block;
     padding: 10px 20px;
     border-radius: 50px;
@@ -81,4 +124,87 @@ h1 {
     color: var(--neon-green);
     margin-top: 5px;
     display: block;
+}
+
+.teams-table-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+.teams-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.teams-table thead {
+    background: rgba(255,255,255,0.1);
+}
+
+.teams-table th {
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 900;
+    color: var(--neon-green);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--hyper-pink);
+}
+
+.teams-table td {
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.teams-table tbody tr:hover {
+    background: rgba(57, 255, 20, 0.1);
+}
+
+.teams-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    background: rgba(10, 14, 39, 0.5);
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .teams-table-section {
+        padding: 20px 10px;
+    }
+
+    .teams-table th,
+    .teams-table td {
+        padding: 10px 8px;
+        font-size: 0.9rem;
+    }
 }
