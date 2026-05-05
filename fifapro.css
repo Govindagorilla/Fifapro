@@ -1,0 +1,84 @@
+:root {
+    --neon-green: #39FF14;
+    --hyper-pink: #FF007F;
+    --deep-blue: #0A0E27;
+    --glass: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background: radial-gradient(circle at top, #1a1f3c, var(--deep-blue));
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=2000') no-repeat center/cover;
+    box-shadow: inset 0 0 0 1000px rgba(10, 14, 39, 0.7);
+}
+
+h1 {
+    font-family: 'Bungee', cursive;
+    font-size: 4rem;
+    margin: 0;
+    color: var(--neon-green);
+    text-shadow: 3px 3px var(--hyper-pink);
+}
+
+.countdown-timer {
+    background: var(--hyper-pink);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 900;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.team-card {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.team-card:hover {
+    transform: translateY(-10px) rotate(3deg);
+    box-shadow: 0 0 20px var(--neon-green);
+    border-color: var(--neon-green);
+}
+
+.flag {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.team-name {
+    font-weight: 900;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.region-tag {
+    font-size: 0.7rem;
+    color: var(--neon-green);
+    margin-top: 5px;
+    display: block;
+}
